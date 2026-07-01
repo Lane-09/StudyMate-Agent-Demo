@@ -1,0 +1,53 @@
+SOURCE_FILE: sample_course_note.txt
+TITLE: Demo Course Notes for StudyMate Agent
+TYPE: Public demo note
+NOTICE: This is a self-written sample note for public GitHub demonstration. It does not contain original course slides or copyrighted lecture content.
+
+Topic 1: Retrieval-Augmented Generation
+
+Retrieval-Augmented Generation, or RAG, is a method that combines information retrieval with language generation. Instead of asking a language model to answer only from its internal knowledge, a RAG system first searches a knowledge base and retrieves relevant text chunks. The retrieved chunks are then provided to the language model as evidence for generating the final answer.
+
+RAG is useful when the answer should be based on a private or domain-specific knowledge base, such as course notes, company documents, legal files, or technical manuals. It can reduce hallucination because the model is encouraged to answer based on retrieved evidence.
+
+A basic RAG pipeline usually includes:
+1. Document collection
+2. Text extraction
+3. Chunking
+4. Embedding generation
+5. Vector database storage
+6. Query retrieval
+7. Answer generation
+
+Topic 2: OCR in Multimodal Retrieval
+
+OCR stands for Optical Character Recognition. It is used to extract text from images, scanned documents, screenshots, charts, tables, and PDF pages. In a multimodal study assistant, OCR helps convert visual text into searchable text.
+
+For example, a lecture slide may contain important labels inside a diagram. If the system only extracts normal PDF text, it may miss the diagram labels. By rendering each PDF page as an image and applying OCR, the system can capture additional visual text and add it to the knowledge base.
+
+However, OCR has limitations. It may fail when the text is too small, blurry, rotated, low-resolution, or located inside a complex figure. OCR can extract visible words, but it cannot fully understand arrows, layout, or spatial relationships.
+
+Topic 3: Vector Database and Embedding
+
+An embedding model converts text into numerical vectors. Text with similar meanings should have similar vectors. A vector database such as ChromaDB stores these vectors and supports semantic search.
+
+In this project, each document is divided into smaller chunks. Each chunk is converted into an embedding and stored with metadata, such as source file, page number, modality, and chunk index. When the user asks a question, the question is also converted into an embedding. The vector database then returns the most similar chunks.
+
+Topic 4: Agent Workflow
+
+An AI agent is a system that follows a structured workflow to complete a task. In this demo project, the agent workflow includes five steps:
+
+1. Load user memory
+2. Route the query
+3. Retrieve relevant context
+4. Generate the final answer
+5. Update memory and write trace logs
+
+The route step decides what type of question the user is asking. For example, a question about LoRA may be routed as a PEFT-related query. A question about diagrams or screenshots may be routed as a visual or OCR-related query.
+
+Topic 5: PEFT and LoRA
+
+PEFT stands for Parameter-Efficient Fine-Tuning. It aims to adapt a large model to a new task while training only a small number of additional parameters.
+
+LoRA, or Low-Rank Adaptation, is a common PEFT method. Instead of updating all original model weights, LoRA freezes the original weights and learns small low-rank update matrices. This reduces trainable parameters, memory usage, and checkpoint size.
+
+LoRA is useful when full fine-tuning is too expensive. It is commonly used to adapt large language models with limited hardware resources.

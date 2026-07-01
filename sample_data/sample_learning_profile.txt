@@ -1,0 +1,33 @@
+SOURCE_FILE: sample_learning_profile.txt
+TITLE: Sample User Learning Profile
+TYPE: Public demo profile
+NOTICE: This is a synthetic learning profile for GitHub demonstration.
+
+User learning preference:
+The user prefers clear, beginner-friendly explanations.
+
+Preferred answer style:
+- Explain concepts step by step.
+- Use simple language before technical terms.
+- Provide short examples when possible.
+- Avoid overly complex mathematical notation unless necessary.
+- Summarise the final answer clearly.
+
+Preferred language:
+English for public demo.
+Chinese explanation can be used if the user explicitly asks for Chinese.
+
+Current learning goals:
+- Understand retrieval-augmented generation.
+- Understand OCR-based multimodal retrieval.
+- Understand how vector databases support semantic search.
+- Understand the difference between normal RAG and agent-based RAG.
+- Understand PEFT and LoRA at a beginner level.
+
+Weak points:
+- The user may confuse retrieval with generation.
+- The user may not fully understand embedding and vector search.
+- The user may need step-by-step explanations of agent workflows.
+
+Preferred examples:
+Use study assistant, lecture note search, document question answering, and exam revision examples.

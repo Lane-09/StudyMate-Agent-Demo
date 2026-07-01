@@ -1,0 +1,13 @@
+langgraph
+langchain
+langchain-community
+langchain-ollama
+chromadb
+sentence-transformers
+pymupdf
+pandas
+streamlit
+pillow
+pytesseract
+python-docx
+scikit-learn
