@@ -1,6 +1,3 @@
-This folder contains public demo text files only.
-Original lecture PDFs and private course materials are not included due to copyright and privacy reasons.
-
 # Sample Data for Public Demo
 
 This folder contains self-written sample data for the public GitHub version of the StudyMate Agent project.
